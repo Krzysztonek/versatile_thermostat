@@ -187,7 +187,7 @@ target:
 ```
 
 ## Pomijanie sprawdzania stanu okna
-Usługa ta umożliwia dynamiczne załączanie i wyłączanie funkcji pomijania stanu otwarcia okien (lub drzwi). To z kolei pozwala termostatom kontunuować grzanie nawet w sytuacji wykrycia otwarcia okna.
+Usługa ta umożliwia dynamiczne załączanie i wyłączanie funkcji pomijania stanu otwarcia okien (lub drzwi). To z kolei pozwala termostatom kontynuować grzanie nawet w sytuacji wykrycia otwarcia okna.
 Przy wartości ``true``, zmiany stanu okna nie będą wpływały na termostat. Przy wartości ``false``, termostat zostanie wyłączony, jeśli okno będzie nadal otwarte.
 
 Aby zmienić ustawienie pomijania stanu otwarcia okna, zastosuj poniższy kod:
@@ -231,12 +231,12 @@ Powiadomienia dotyczą następujących zdarzeń:
 - ``versatile_thermostat_central_boiler_event``: zdarzenie zmiany stanu kotła
 - ``versatile_thermostat_auto_start_stop_event``: zdarzenie zatrzymania lub ponownego uruchomienia wykonane przez funkcję autoSTART/autoSTOP
 
-Jeśli śledziłeś instrukcje, gdy termostat przełącza się w tryb bezpieczny, wyzwalane są 3 zdarzenia:
+Gdy termostat przełącza się w tryb bezpieczny, wyzwalane są 3 zdarzenia:
 1. ``versatile_thermostat_temperature_event`` – wskazuje, że termometr przestał odpowiadać,
 2. ``versatile_thermostat_preset_event`` – wskazuje przełączenie na ustawienie trybu `bezpiecznego`,
 3. ``versatile_thermostat_hvac_mode_event`` – wskazuje potencjalne wyłączenie termostatu.
 
-Każde zdarzenie przechowuje kluczowe wartości zdarzenia (temperatury, aktualne ustawienia, bieżąca moc, ...) oraz stany termostatu.
+Każde zdarzenie przechowuje kluczowe wartości zdarzenia (temperatury, aktualne ustawienia, bieżącą moc) oraz stany termostatu.
 Możesz łatwo przechwytywać te zdarzenia w automatyzacji, na przykład w celu powiadamiania użytkowników.
 
 # Atrybuty własne
